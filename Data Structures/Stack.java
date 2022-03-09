@@ -1,4 +1,5 @@
 package DataStructures;
+import Node.*;
 
 public class Stack<T> {
     private Node<T> First;
