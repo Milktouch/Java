@@ -97,18 +97,19 @@ public class Curveplanecipher {
     
    
     public static void main(String[] args) {
-        Scanner in = new Scanner (System.in);
-        System.out.println("enter the message");
-        String msg = in.nextLine();
-        System.out.println("type 1 for encryption ot 2 for decryption");
-        int c=in.nextInt();
-        if(c==1){
-            msg=curvelaneen(msg);
+        try (Scanner scanner = new Scanner (System.in)) {
+            System.out.println("enter the message");
+            String msg = scanner.nextLine();
+            System.out.println("type 1 for encryption ot 2 for decryption");
+            int c=scanner.nextInt();
+            if(c==1){
+                msg=curvelaneen(msg);
+            }
+            if (c==2) {
+                msg=curvelanede(msg);
+            }
+            System.out.println(msg);
         }
-        if (c==2) {
-            msg=curvelanede(msg);
-        }
-        System.out.println(msg);
     }
     
 }
