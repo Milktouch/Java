@@ -28,17 +28,17 @@ public class Codewords {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner in= new Scanner(System.in);
+        Scanner scan =  new Scanner(System.in);
         String message, newmessage;
         int words;
         System.out.println("enter how many words");
-        words=in.nextInt();
+        words=scan.nextInt();
         int [] spaces=new int[words];
         System.out.println("enter the message");
-        message=in.next();
+        message=scan.next();
         for (int i = 0; i < spaces.length; i++) {
             System.out.println("enter the amount of letters in word "+(i+1));
-            spaces[i] =in.nextInt();
+            spaces[i] =scan.nextInt();
             
         }
         newmessage=insertspace(message,spaces);
